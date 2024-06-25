@@ -1,0 +1,48 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: #333;
+}
+
+.navbar .nav-link {
+    color: #fff !important;
+}
+
+.hero-section {
+    height: 100vh;
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.hero-section .btn-primary {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+}
+
+.footer {
+    margin-top: 50px;
+}
+
+.footer .social-icons a {
+    font-size: 1.5rem;
+}
+
+.footer p {
+    margin: 0;
+}
