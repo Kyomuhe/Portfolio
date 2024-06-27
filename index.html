@@ -41,13 +41,14 @@
     <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div class="container text-center">
-            <h1>Hello, Iam Precious </h1>
+            <h1>Hello, I am Precious</h1>
             <p>Junior Web & App Developer, Bringing Ideas to Life.</p>
             <a href="#portfolio" class="btn btn-primary mt-4">Projects</a>
         </div>
     </section>
 
-        <section id="about" class="about-section py-5">
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
         <div class="container">
             <h2>About Me</h2>
             <p>I am a passionate web and app developer with experience in creating dynamic and responsive websites and applications. My goal is to bring innovative ideas to life and provide exceptional user experiences.</p>
@@ -80,9 +81,6 @@
         </div>
     </section>
 
-
-
-
     <!-- Footer -->
     <footer class="footer bg-dark text-white py-4">
         <div class="container text-center">
@@ -95,9 +93,37 @@
         </div>
     </footer>
 
-    <!-- Bootstrap and jQuery scripts -->
+    <!-- jQuery and Bootstrap scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Smooth scrolling script -->
+    <script>
+        $(document).ready(function(){
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
 </body>
 </html>
