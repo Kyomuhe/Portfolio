@@ -120,7 +120,7 @@
     </footer>
 
     <!-- jQuery and Bootstrap scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
@@ -128,7 +128,7 @@
     <script>
         $(document).ready(function(){
             // Add smooth scrolling to all links
-            $("a").on('click', function(event) {
+            $("a.nav-link, .btn-primary").on('click', function(event) {
 
                 // Make sure this.hash has a value before overriding default behavior
                 if (this.hash !== "") {
