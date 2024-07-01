@@ -162,7 +162,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<!-- Smooth scrolling script 
+<!-- Smooth scrolling script -->
+    <!-- Smooth scrolling script -->
 <script>
     $(document).ready(function(){
         // Add smooth scrolling to all links
@@ -182,12 +183,15 @@
                     scrollTop: $(hash).offset().top
                 }, 800, function(){
                     // Add hash (#) to URL when done scrolling (default click behavior)
-                    window.location.hash = hash;
+                    if (history.pushState) {
+                        history.pushState(null, null, hash);
+                    } else {
+                        window.location.hash = hash;
+                    }
                 });
             }
         });
     });
 </script>
-    -->
 </body>
 </html>
