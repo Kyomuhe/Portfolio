@@ -163,44 +163,21 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <!-- Smooth scrolling script -->
-    <!-- Smooth scrolling script -->
-<script>
-    $(document).ready(function(){
-        // Add smooth scrolling to all links
-        $("a.nav-link, .btn-primary").on('click', function(event) {
+    <script>
+        $(document).ready(function(){
+            // Remove all click handlers for smooth scrolling
+            $("a.nav-link, .btn-primary").off('click');
 
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-                // Prevent default anchor click behavior
-                event.preventDefault();
+            // Collapse the navbar on link click (for mobile view)
+            $('.navbar-nav>li>a').on('click', function(){
+                $('.navbar-collapse').collapse('hide');
+            });
 
-                // Store hash
-                var hash = this.hash;
-
-                // Using jQuery's animate() method to add smooth page scroll
-                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 800, function(){
-                    // Add hash (#) to URL when done scrolling (default click behavior)
-                    if (history.pushState) {
-                        history.pushState(null, null, hash);
-                    } else {
-                        window.location.hash = hash;
-                    }
-                });
-            }
+            // Collapse the navbar on button click (for mobile view)
+            $('.navbar-toggler').on('click', function(){
+                $('.navbar-collapse').collapse('hide');
+            });
         });
-        // Collapse the navbar on link click (for mobile view)
-        $('.navbar-nav>li>a').on('click', function(){
-            $('.navbar-collapse').collapse('hide');
-        });
-        // Collapse the navbar on button click (for mobile view)
-        $('.navbar-toggler').on('click', function(){
-            $('.navbar-collapse').collapse('hide');
-        });
-
-    });
-</script>
+    </script>
 </body>
 </html>
