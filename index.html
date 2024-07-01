@@ -191,6 +191,11 @@
                 });
             }
         });
+        // Collapse the navbar on link click (for mobile view)
+        $('.navbar-nav>li>a').on('click', function(){
+            $('.navbar-collapse').collapse('hide');
+        });
+
     });
 </script>
 </body>
