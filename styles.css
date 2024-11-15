@@ -112,12 +112,28 @@ p {
 .footer p {
     margin: 0;
 }
-
 .divs {
-    color: white;
-    background: blue;
-    padding: 10px;
-    display: inline-block;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.divs::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #00d4ff;
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 .navbar-toggler {
     border-color: rgba(255, 255, 255, 0.1);
