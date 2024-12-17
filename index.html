@@ -161,8 +161,8 @@
             <h2 class="section-title">Get in Touch</h2>
             <p>Email: <a href="mailto:kyomuhendopreciouskay@gmail.com">kyomuhendopreciouskay@gmail.com</a></p>
             <div>
-                <a href="https://www.linkedin.com/in/your-linkedin" class="btn btn-outline-primary mx-2" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/your-github" class="btn btn-outline-dark mx-2" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/kyomuhendo-precious-35b685254/" class="btn btn-outline-primary mx-2" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/kyomuhe" class="btn btn-outline-dark mx-2" target="_blank"><i class="fab fa-github"></i> GitHub</a>
             </div>
 
         </div>
@@ -200,5 +200,22 @@
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Automatically close the menu when a menu link is clicked
+        document.addEventListener("DOMContentLoaded", function () {
+            var navbarToggler = document.querySelector('.navbar-toggler');
+            var navLinks = document.querySelectorAll('.navbar-nav a');
+    
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    // Check if menu is open
+                    if (navbarToggler && !navbarToggler.classList.contains('collapsed')) {
+                        navbarToggler.click(); // Programmatically collapse the menu
+                    }
+                });
+            });
+        });
+    </script>
+    
 </body>
 </html>
