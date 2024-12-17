@@ -3,74 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Kyomuhendo Precious</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Portfolio</title>
 </head>
 <body>
-    <!-- Navigation Menu -->
-    <nav class="navbar navbar-expand-lg fixed-top navbarScroll">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">KYOMUHENDO PRECIOUS</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skill">Skills and Languages</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container text-center">
-            <h1>Hello, I am Precious</h1>
-            <p>Junior Web & App Developer, Bringing Ideas to Life.</p>
-            <a href="#projects" class="btn btn-primary mt-4">Projects</a>
+    <section id="home" class="hero-section d-flex align-items-center">
+        <div class="container text-center text-white">
+            <h1 class="display-4">Hello, I'm <span class="highlight">Precious</span></h1>
+            <p class="lead">A Junior Web & App Developer Bringing Ideas to Life</p>
+            <a href="#projects" class="btn btn-primary mt-3">View Projects</a>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about-section py-5">
         <div class="container">
-            <h2 class="divs">About Me</h2>
-            <p>Hey there my name is kyomuhendo Precious, currently I am a fourth year student pursuing a bachelor's degree in software engineering at Makerere University.</p>
-            <p>The moment I started coding, my perspective of problem-solving changed, making something real out of an idea or an imagination.</p>
-            <p>I am a passionate web and app developer with experience in creating dynamic and responsive websites and applications. My goal is to bring innovative ideas to life and provide exceptional user experiences.</p>
-            <p>I am a very consistent hard worker, a good team player who works very well with others, and also produce good quality work alone.</p>
-            <p>I am a fast learner, and I always ask for help when I need it.</p>
-            <div>
-                <h5>Hobbies</h5>
-                <ul>
-                    <li>Coding</li>
-                    <li>Listening to music</li>
-                    <li>Watching movies</li>
-                </ul>
-                <h5>Languages</h5>
-                <ul>
-                    <li>English</li>
-                    <li>Luganda</li>
-                </ul>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="image3.jpeg" alt="Profile" class="img-fluid rounded-circle mb-3 shadow">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="section-title">About Me</h2>
+                    <p>I'm a passionate <b>Web & App Developer</b> and a Software Engineering student at Makerere University. I thrive on turning ideas into functional and visually appealing products.</p>
+                    <P>Iam a very consistent hard worker, a good team player who works well with others and also produce good quality work alone</P>
+                    <p>Iam a fast learner, and i always ask for help when i need it</p>
+                    <p><i class="fas fa-code text-primary"></i> I love coding, solving problems, and building digital solutions.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -78,115 +59,146 @@
     <!-- Services Section -->
     <section id="services" class="services-section py-5 bg-light">
         <div class="container">
-            <h2 class="divs"> Services</h2>
-
-            <p>I offer a range of services including web development, app development. Whether you need a new website, a mobile app, or a redesign of your current platform, I can help you achieve your goals.</p>
+            <h2 class="section-title text-center mb-4">What I Do</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <i class="fas fa-laptop-code fa-3x text-primary mb-3"></i>
+                    <h5>Web Development</h5>
+                    <p>Building responsive and dynamic websites tailored to your needs.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+                    <h5>App Development</h5>
+                    <p>Creating mobile applications that solve real-world problems.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-cogs fa-3x text-primary mb-3"></i>
+                    <h5>Problem Solving</h5>
+                    <p>Providing solutions through innovative software and tools.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="portfolio-section py-5">
         <div class="container">
-            <h2 class="divs">Projects</h2>
-            <p>Here are some of the projects I have worked on. Each project showcases my skills and ability to deliver high-quality work.</p>
+            <h2 class="section-title text-center mb-4">Projects</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Java with Kay</h5>
+                            <p class="card-text">A Django app teaching Java basics interactively.</p>
+                            <a href="https://pkay.pythonanywhere.com/index/" class="btn btn-outline-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Critics Corner</h5>
+                            <p class="card-text">A movie blog for reviews and critiques of movies and TV shows.</p>
+                            <a href="https://kyomuhe.github.io/critics_corner/" class="btn btn-outline-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Its okay App</h5>
+                            <p class="card-text">Plaform where people with mental health issues can connect and support each other.
+                            </p>
+                            <p>Status :<b>Ongoing</b></p>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- Project 1: Java with Kay -->
-            <div class="project-item">
-                <h5>Java with Kay</h5>
-                <p>A simple Django app that teaches the basics of Java. This app is designed to help beginners understand the core concepts of Java programming through interactive tutorials and examples.</p>
-                <P>Frame work used: <b>Django</b></P>
-                <p>Status: <b>Completed</b></p>
-                <a href="https://pkay.pythonanywhere.com/index/" class="btn btn-primary mt-2">View Project</a>
             </div>
-
-            <!-- Project 2: It's Okay App -->
-            <div class="project-item mt-4">
-                <h5>Yero App</h5>
-                <p>An ongoing project aimed at creating a platform where people with mental health issues can connect and support each other. The app will provide resources, forums, and a community space to help individuals share their experiences and seek help.</p>
-                <p>Status: <b>Ongoing</b></p>
-            </div>
-            <div class="project-item mt-5">
-                <h5>Critics Corner</h5>
-                <p> A movie blog where I review and critique movies and TV series, providing insights and a comprehensive overview of each one.</p>
-                <p>Status: <b>Completed</b></p>
-                <a href="https://kyomuhe.github.io/critics_corner/" class="btn btn-primary mt-2">View Project</a>
-
-            </div>
-
         </div>
     </section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center mb-4">Skills & Technologies</h2>
+        <div class="row text-center">
+            <div class="col-md-3 mb-4">
+                <i class="fab fa-html5 fa-3x text-danger"></i>
+                <p>HTML</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <i class="fab fa-css3-alt fa-3x text-primary"></i>
+                <p>CSS</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <i class="fab fa-js fa-3x text-warning"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <i class="fab fa-python fa-3x text-success"></i>
+                <p>Python</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <i class="fab fa-java fa-3x text-info"></i>
+                <p>Java</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <i class="fas fa-leaf fa-3x text-secondary"></i>
+                <p>Django</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <i class="fas fa-chart-bar fa-3x text-primary"></i>
+                <p>Data Analysis</p>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section py-5 bg-light">
-        <div class="container">
-            <h2 class="divs">Contact</h2>
-            <p>If you would like to get in touch, feel free to reach out to me through the contact form or via social media.</p>
-            <p>Email: kyomuhendopreciouskay@gmail.com or kyomuhendoprecious84@gmail.com</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/kyomuhendo-precious-35b685254/">kyomuhendo-precious</a></p>
-        </div>
-    </section>
-
-    <!-- Skills and Languages Section -->
-    <section id="skill" class="services-section py-5 bg-light">
-        <div class="container">
-            <h2 class="divs">Skills and Languages</h2>
-            <h6>Proficient</h6>
-            <ul>
-                <li>Java</li>
-                <li>Python</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>PHP</li>
-                <li>Django</li>
-                <li>Data Analysis</li>
-            </ul>
-            <h6>Familiar</h6>
-            <ul>
-                <li>XML</li>
-                <li>Kotlin</li>
-                <li>Embedded C</li>
-                <li>Flutter</li>
-                <li>Artificial Intelligence</li>
-                <li>Machine Learning</li>
-                <li>Laravel</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer bg-dark text-white py-4">
+    <section id="contact" class="contact-section py-5">
         <div class="container text-center">
-            <p>© 2024 Precious Kay. All rights reserved.</p>
-            <div class="social-icons">
-                <a href="https://github.com/Kyomuhe/" class="text-white mr-2"><i class="fab fa-github"></i></a>
-                <a href="https://twitter.com/preciouskay84" class="text-white mr-2"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/kyomuhendo-precious-35b685254/" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+            <h2 class="section-title">Get in Touch</h2>
+            <p>Email: <a href="mailto:kyomuhendopreciouskay@gmail.com">kyomuhendopreciouskay@gmail.com</a></p>
+            <div>
+                <a href="https://www.linkedin.com/in/your-linkedin" class="btn btn-outline-primary mx-2" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/your-github" class="btn btn-outline-dark mx-2" target="_blank"><i class="fab fa-github"></i> GitHub</a>
             </div>
+
         </div>
+    </section>
+        <!-- Hobbies & Languages -->
+        <section id="hobbies-languages" class="py-5 bg-light">
+            <div class="container text-center">
+                <h2 class="section-title mb-4">Hobbies & Languages</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <h4>Hobbies</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-code text-primary"></i> Coding</li>
+                            <li><i class="fas fa-music text-primary"></i> Listening to Music</li>
+                            <li><i class="fas fa-film text-primary"></i> Watching Movies</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <h4>Languages</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-language text-success"></i> English</li>
+                            <li><i class="fas fa-language text-success"></i> Luganda</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white text-center py-3">
+        <p>© 2024 Kyomuhendo Precious. All rights reserved.</p>
     </footer>
 
-    <!-- jQuery and Bootstrap scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<!-- Smooth scrolling script -->
-    <script>
-        $(document).ready(function(){
-            // Remove all click handlers for smooth scrolling
-            $("a.nav-link, .btn-primary").off('click');
-
-            // Collapse the navbar on link click (for mobile view)
-            $('.navbar-nav>li>a').on('click', function(){
-                $('.navbar-collapse').collapse('hide');
-            });
-
-            // Collapse the navbar on button click (for mobile view)
-            $('.navbar-toggler').on('click', function(){
-                $('.navbar-collapse').collapse('hide');
-            });
-        });
-    </script>
 </body>
 </html>
