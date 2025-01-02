@@ -30,20 +30,23 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section d-flex align-items-center">
+    <section id="home" class="hero-section d-flex align-items-center ">
         <div class="container text-center text-white">
-            <h1 class="display-4">Hello, I'm <span class="highlight">Precious</span></h1>
+            <h1 class="display-4">
+                Hello, I'm <span class="highlight">Precious</span>
+                <span class="wave">👋</span>
+            </h1>
             <p class="lead">A Junior Front end Software Engineer, Bringing Ideas to Life</p>
             <a href="#projects" class="btn btn-primary mt-3">View Projects</a>
         </div>
     </section>
-
+    
     <!-- About Section -->
-    <section id="about" class="about-section py-5">
+    <section id="about" class="about-section py-5 scroll-hidden">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <img src="image3.jpeg" alt="Profile" class="img-fluid rounded-circle mb-3 shadow">
+                    <img src="port.jpeg" alt="Profile" class="img-fluid rounded-circle mb-3 shadow">
                 </div>
                 <div class="col-md-6">
                     <h2 class="section-title">About Me</h2>
@@ -57,7 +60,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services-section py-5 bg-light">
+    <section id="services" class="services-section py-5 bg-light scroll-hidden">
         <div class="container">
             <h2 class="section-title text-center mb-4">What I Do</h2>
             <div class="row text-center">
@@ -81,7 +84,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="portfolio-section py-5">
+    <section id="projects" class="portfolio-section py-5 scroll-hidden">
         <div class="container">
             <h2 class="section-title text-center mb-4">Projects</h2>
             <div class="row">
@@ -119,7 +122,7 @@
     </section>
 
 <!-- Skills Section -->
-<section id="skills" class="skills-section py-5 bg-light">
+<section id="skills" class="skills-section py-5 bg-light scroll-hidden">
     <div class="container">
         <h2 class="section-title text-center mb-4">Skills & Technologies</h2>
         <div class="row text-center">
@@ -164,7 +167,7 @@
 </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section py-5">
+    <section id="contact" class="contact-section py-5 scroll-hidden">
         <div class="container text-center">
             <h2 class="section-title">Get in Touch</h2>
             <p>Email: <a href="mailto:kyomuhendopreciouskay@gmail.com">kyomuhendopreciouskay@gmail.com</a></p>
@@ -176,7 +179,7 @@
         </div>
     </section>
         <!-- Hobbies & Languages -->
-        <section id="hobbies-languages" class="py-5 bg-light">
+        <section id="hobbies-languages" class="py-5 bg-light scroll-hidden">
             <div class="container text-center">
                 <h2 class="section-title mb-4">Hobbies & Languages</h2>
                 <div class="row">
@@ -224,6 +227,44 @@
             });
         });
     </script>
+    <script>
+        // Scroll animation function
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollElements = document.querySelectorAll(".scroll-hidden");
+    
+            const elementInView = (el, offset = 100) => {
+                const elementTop = el.getBoundingClientRect().top;
+                return (
+                    elementTop <= (window.innerHeight || document.documentElement.clientHeight) - offset
+                );
+            };
+    
+            const displayScrollElement = (element) => {
+                element.classList.add("scroll-visible");
+            };
+    
+            const hideScrollElement = (element) => {
+                element.classList.remove("scroll-visible");
+            };
+    
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el, 150)) {
+                        displayScrollElement(el);
+                    } else {
+                        hideScrollElement(el);
+                    }
+                });
+            };
+    
+            // Listen for scroll events
+            window.addEventListener("scroll", handleScrollAnimation);
+    
+            // Trigger animation on load
+            handleScrollAnimation();
+        });
+    </script>
+    
     
 </body>
 </html>

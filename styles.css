@@ -41,3 +41,68 @@ body {
     background-color: #343a40;
     color: #fff;
 }
+/* Waving Hand Animation */
+.wave {
+    display: inline-block;
+    animation: wave-animation 2s infinite;
+    font-size: 2.5rem;
+    margin-left: 10px;
+}
+
+/* Keyframes for waving hand */
+@keyframes wave-animation {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(20deg); }
+    40% { transform: rotate(-10deg); }
+    60% { transform: rotate(10deg); }
+    80% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Button Hover Effect */
+.btn-primary {
+    background-color: #00d4ff;
+    border-color: #00d4ff;
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #007dbb;
+    border-color: #007dbb;
+}
+
+/* Card Hover Effect */
+.project-card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+/* Slide-in animation from bottom */
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Initial hidden state */
+.scroll-hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+}
+
+/* Visible state triggers the animation */
+.scroll-visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: slide-in-bottom 0.5s ease forwards;
+}
