@@ -17,6 +17,7 @@
     --footer-bg: #343a40;
     --nav-text: #ffffff;
     --nav-bg: rgba(0, 0, 0, 0.9);
+    --navbar-height: 80px;
 }
 
 * {
@@ -121,9 +122,10 @@ ul {
 /* ===== NAVBAR ===== */
 .navbar {
     background-color: var(--nav-bg) !important;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     transition: var(--transition);
-    border-bottom: 4px solid var(--primary-color); /* Thicker for visibility */
+    border-bottom: 4px solid var(--primary-color);
+    height: var(--navbar-height);
 }
 
 .navbar.scrolled {
@@ -163,6 +165,7 @@ ul {
 
 /* ===== HERO SECTION ===== */
 .hero-section {
+    padding-top: 0;
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97') no-repeat center center;
     background-size: cover;
@@ -182,6 +185,7 @@ ul {
     opacity: 0.9;
     text-transform: uppercase;
     font-weight: 500;
+    color: #ffffff;
 }
 
 .hero-section h1 {
@@ -189,12 +193,14 @@ ul {
     font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
+    color: #ffffff;
 }
 
 .hero-section .lead {
     font-size: 1.5rem;
     margin-bottom: 2rem;
     opacity: 0.9;
+    color: #ffffff;
 }
 
 .hero-buttons {
@@ -248,8 +254,8 @@ ul {
 
 /* ===== ABOUT SECTION ===== */
 .about-section {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .profile-image-container {
@@ -739,25 +745,6 @@ ul {
     100% { transform: rotate(360deg); }
 }
 
-/* Typing Animation */
-.typing-text {
-    overflow: hidden;
-    border-right: 2px solid #fff;
-    white-space: nowrap;
-    margin: 0 auto;
-    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #fff }
-}
-
 /* Form Validation Styles */
 .form-control.is-invalid {
     border-color: #dc3545;
@@ -917,4 +904,31 @@ ul {
 @keyframes skill-shine {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
+}
+
+/* Add scroll margin to all sections */
+section {
+    scroll-margin-top: var(--navbar-height);
+    padding-top: 0;
+}
+
+/* Adjust specific section paddings */
+.about-section,
+.services-section,
+.portfolio-section,
+.skills-section,
+.contact-section {
+    padding: 5rem 0;
+}
+
+/* Fix section scrolling */
+section {
+    scroll-margin-top: var(--navbar-height);
+}
+
+.contact-section {
+    padding-top: calc(var(--navbar-height) + 2rem);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
