@@ -16,10 +16,14 @@
         <div class="loader"></div>
     </div>
 
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Kyomuhendo Precious<span class="highlight">.</span></a>
+            <a class="navbar-brand" href="#">Precious kay<span class="highlight">.</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -38,23 +42,16 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero-section d-flex align-items-center">
-        <div class="overlay"></div>
         <div class="container text-center text-white">
             <div class="hero-content">
                 <p class="pre-heading animate__animated animate__fadeInDown">FRONT END DEVELOPER</p>
                 <h1 class="display-4 animate__animated animate__fadeInUp">
                     Hello, I'm <span class="highlight">Precious</span>
-                    <span class="wave">👋</span>
                 </h1>
-                <p class="lead typing-text animate__animated animate__fadeInUp">A Junior Front end Software Engineer, Bringing Ideas to Life</p>
+                <p class="lead typing-text animate__animated animate__fadeInUp">Crafting Digital Experiences with Code</p>
                 <div class="hero-buttons animate__animated animate__fadeInUp">
-                    <a href="#projects" class="btn btn-primary mt-3">View Projects</a>
-                    <a href="#contact" class="btn btn-outline-light mt-3 ml-2">Contact Me</a>
-                </div>
-                <div class="scroll-down animate__animated animate__fadeInUp">
-                    <a href="#about">
-                        <i class="fas fa-chevron-down"></i>
-                    </a>
+                    <a href="#projects" class="btn btn-light">View Projects</a>
+                    <a href="#contact" class="btn btn-outline-light">Contact Me</a>
                 </div>
             </div>
         </div>
@@ -156,56 +153,38 @@
             <h2 class="section-title text-center mb-5">My <span class="highlight">Projects</span></h2>
             <div class="row">
                 <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="project-card shadow">
-                        <div class="project-img">
-                            <div class="project-overlay">
-                                <div class="project-tech">Django</div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Java with Kay</h5>
-                            <p class="card-text">A Django app teaching Java basics interactively with a step-by-step learning approach.</p>
-                            <div class="project-links">
-                                <a href="https://pkay.pythonanywhere.com/index/" class="btn btn-outline-primary" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i> View
-                                </a>
-                            </div>
+                    <div class="project-card">
+                        <div class="project-tech">Django</div>
+                        <h5 class="card-title">Java with Kay</h5>
+                        <p class="card-text">A Django app teaching Java basics interactively with a step-by-step learning approach.</p>
+                        <div class="project-links">
+                            <a href="https://pkay.pythonanywhere.com/index/" class="btn btn-outline-primary" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> View Project
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="project-card shadow">
-                        <div class="project-img">
-                            <div class="project-overlay">
-                                <div class="project-tech">HTML/CSS/JS</div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Critics Corner</h5>
-                            <p class="card-text">A movie blog for reviews and critiques of the latest movies and TV shows.</p>
-                            <div class="project-links">
-                                <a href="https://kyomuhe.github.io/critics_corner/" class="btn btn-outline-primary" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i> View
-                                </a>
-                            </div>
+                    <div class="project-card">
+                        <div class="project-tech">HTML/CSS/JS</div>
+                        <h5 class="card-title">Critics Corner</h5>
+                        <p class="card-text">A movie blog for reviews and critiques of the latest movies and TV shows.</p>
+                        <div class="project-links">
+                            <a href="https://kyomuhe.github.io/critics_corner/" class="btn btn-outline-primary" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> View Project
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="project-card shadow">
-                        <div class="project-img">
-                            <div class="project-overlay">
-                                <div class="project-tech">React</div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Its okay App</h5>
-                            <p class="card-text">Platform where people with mental health issues can connect and support each other.</p>
-                            <div class="project-links">
-                                <a href="https://kyomuhe.github.io/okay_site/" class="btn btn-outline-primary" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i> View progress
-                                </a>
-                            </div>
+                    <div class="project-card">
+                        <div class="project-tech">React</div>
+                        <h5 class="card-title">Its okay App</h5>
+                        <p class="card-text">Platform where people with mental health issues can connect and support each other.</p>
+                        <div class="project-links">
+                            <a href="https://kyomuhe.github.io/okay_site/" class="btn btn-outline-primary" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> View Project
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -563,6 +542,39 @@
 
             return false;
         }
+
+        // Custom Cursor
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, {
+                duration: 500,
+                fill: "forwards"
+            });
+        });
+
+        // Add hover effect to interactive elements
+        document.querySelectorAll('a, button, .project-card, .service-card').forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                cursorDot.classList.add('cursor-hover');
+                cursorOutline.classList.add('cursor-hover');
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                cursorDot.classList.remove('cursor-hover');
+                cursorOutline.classList.remove('cursor-hover');
+            });
+        });
     </script>
 </body>
 </html>
